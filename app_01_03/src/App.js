@@ -1,16 +1,12 @@
-import Backdrop from "./components/Backdrop";
-import Modal from "./components/Modal";
 import Todo from "./components/Todo";
 
-const App = function () {
+const App = function (props) {
   return (
     <div>
       <h1>My Todos</h1>
       <Todo title="Learn React" />
       <Todo title="Master React" />
       <Todo title="Teach React" />
-      <Modal />
-      <Backdrop />
     </div>
   );
 };
