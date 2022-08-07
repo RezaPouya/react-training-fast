@@ -1,0 +1,7 @@
+
+
+> npm install  react-router-dom
+
+Router : which component should be load for this address
+
+we shoud wrape app component in router in index.js
