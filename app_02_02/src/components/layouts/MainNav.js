@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 
+// now all things we define in Mainnave.module.css are properties of CssStyle object
+import CssStyle from "./MainNav.module.css";
+
 const MainNav = function () {
   return (
-    <header>
-      <div>React Meetup</div>
+    <header className={CssStyle.header}>
+      <div className={CssStyle.logo}>React Meetup</div>
       <nav>
         <ul>
           <li>
