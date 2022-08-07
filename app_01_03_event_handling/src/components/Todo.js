@@ -20,7 +20,7 @@ const Todo = function (props) {
 
       {/* {modalIsOpen ? <Modal /> : null} */}
       {modalIsOpen && (
-        <Modal onCancel={closeModalHandler} onConfirm={onConfirmHandler} />
+        <Modal onCancel={closeModalHandler} onConfirm={confirmHandler} />
       )}
 
       {/* sending delegate -- pointer to function to another component  */}
@@ -38,7 +38,7 @@ const Todo = function (props) {
     setModalIsOpen(false);
   }
 
-  function onConfirmHandler() {
+  function confirmHandler() {
     console.log(`on confirm is clicked in Todo component`);
     setModalIsOpen(false);
   }
