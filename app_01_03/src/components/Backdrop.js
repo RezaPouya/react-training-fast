@@ -1,4 +1,4 @@
-const Backdrop = function (props) {
+const Backdrop = function(props) {
   return <div className="backdrop" onClick={props.onCancel} />;
 };
 

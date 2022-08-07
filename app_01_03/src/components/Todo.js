@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import Backdrop from "./Backdrop";
 
 const Todo = function (props) {
-  // always return  an array with 2 elements
+  // useState -> react-hook :  always return  an array with 2 elements
   // js feature : array destructring
   // 1st element : variable
   // 2nd element : function which can used  to assigned new value to variable ( whenever you call this , react will re-excute the compoenet which function is belonged to)
@@ -17,8 +17,11 @@ const Todo = function (props) {
           Delete
         </button>
       </div>
+
       {/* {modalIsOpen ? <Modal /> : null} */}
-      {modalIsOpen && <Modal />}
+      {modalIsOpen && (
+        <Modal onCancel={closeModalHandler} onConfirm={onConfirmHandler} />
+      )}
 
       {/* sending delegate -- pointer to function to another component  */}
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
@@ -31,7 +34,12 @@ const Todo = function (props) {
   }
 
   function closeModalHandler() {
-    console.log(`backdrop  is clicked`);
+    console.log(`close modal handler is clicked`);
+    setModalIsOpen(false);
+  }
+
+  function onConfirmHandler() {
+    console.log(`on confirm is clicked in Todo component`);
     setModalIsOpen(false);
   }
 };
