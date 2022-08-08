@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 
 const New = function () {
+  const navigate = useNavigate();
   return (
     <section>
       <h1>Create New Meetup</h1>
@@ -19,7 +21,9 @@ const New = function () {
           "Content-Type": "application/json",
         },
       }
-    );
+    ).then(() => {
+      navigate("/");
+    });
   }
 };
 
